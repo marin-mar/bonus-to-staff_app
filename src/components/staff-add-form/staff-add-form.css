@@ -1,0 +1,27 @@
+.app-add-form {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #173c5c;
+  border-radius: 4px;
+  box-shadow: 15px 15px 30px rgba(23, 60, 92, 0.5);
+  color: #fff;
+}
+
+.add-form {
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.add-form .form-control {
+  width: 50vw;
+  margin-right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .add-form {
+    flex-wrap: wrap;
+  }
+  .add-form .form-control {
+    margin-top: 0.2rem;
+  }
+}

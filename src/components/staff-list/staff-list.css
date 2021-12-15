@@ -1,0 +1,7 @@
+.staff__list {
+  margin-top: 1.5rem;
+  background-color: #173c5c;
+  border-radius: 4px;
+  box-shadow: 15px 15px 30px rgba(23,60,92, 0.5);
+  color: #f0f8ff;
+}

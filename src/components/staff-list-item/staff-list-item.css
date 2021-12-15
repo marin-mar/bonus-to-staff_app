@@ -1,0 +1,73 @@
+.list-group-item {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.list-group-item-label {
+  margin: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 50%;
+  transition: 0.3s all ease;
+}
+
+.list-group-item-label:hover {
+  letter-spacing: 0.5rem;
+}
+
+.list-group-item-input {
+  margin: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 0;
+}
+
+.list-group-item .btn-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.2rem;
+  background-color: transparent;
+  border: 1px solid rgba(23, 60, 92, 0.3);
+  cursor: pointer;
+}
+
+.list-group-item .btn-bonus {
+  color: #e09f3e;
+}
+
+.list-group-item .btn-trash {
+  color: #e5383b;
+}
+
+.list-group-item .btn-star {
+  border: none;
+  color: #aeaeae;
+  transition: 0.3s all;
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.list-group-item.promote .btn-star {
+  color: #e09f3e;
+  border: 1px solid rgba(23, 60, 92, 0.3);
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.list-group-item.promote .list-group-item-label {
+  letter-spacing: 0.5rem;
+}
+
+.list-group-item.bonus .list-group-item-label,
+.list-group-item.bonus .list-group-item-input {
+  color: #ff6600;
+}
+
+.list-group-item .btn-bonus:hover,
+.list-group-item .btn-star:hover,
+.list-group-item .btn-trash:hover {
+  color: #173c5c;
+}
