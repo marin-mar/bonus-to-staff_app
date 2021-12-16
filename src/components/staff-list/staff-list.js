@@ -15,7 +15,11 @@ const StaffList = ({ data, onDelete, onToggleProp }) => {
     );
   });
 
-  return <ul className="staff__list list-group">{staffList}</ul>;
+  return (
+    <ul className="staff__list list-group">
+      {staffList}
+    </ul>
+  );
 };
 
 export default StaffList;

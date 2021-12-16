@@ -5,3 +5,9 @@
   box-shadow: 15px 15px 30px rgba(23,60,92, 0.5);
   color: #f0f8ff;
 }
+.app__text {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}

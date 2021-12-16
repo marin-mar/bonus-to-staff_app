@@ -19,6 +19,8 @@ class App extends Component {
         { name: 'Ann D.', salary: '850', bonus: true, promote: true, id: 4 },
       ],
       nextId: 5,
+      term: '',
+      filter: 'all',
     };
   }
 
@@ -50,23 +52,53 @@ class App extends Component {
     }));
   };
 
+  searchData = (data, term) => {
+    if (term.length === 0) {
+      return data;
+    }
+
+    return data.filter((item) => {
+      return item.name.indexOf(term) > -1;
+    });
+  };
+
+  onUpdateSearch = (term) => {
+    this.setState({ term });
+  };
+
+  filterStaff = (data, filter) => {
+    switch (filter) {
+      case 'promote':
+        return data.filter((item) => item.promote);
+      case 'bonus':
+        return data.filter((item) => item.bonus);
+      case 'more1000':
+        return data.filter(item => item.salary > 1000);
+      case 'less1000':
+        return data.filter(item => item.salary < 1000);
+      default:
+        return data;
+    }
+  };
+
+  onFilterSelect = (filter) => {
+    this.setState({ filter });
+  }
+
   render() {
-    const { data } = this.state;
+    const { data, term, filter } = this.state;
     const totalStaff = this.state.data.length;
     const bonusStaff = this.state.data.filter((item) => item.bonus).length;
+    const foundData = this.filterStaff(this.searchData(data, term), filter);
 
     return (
       <div className="app">
         <AppInfo totalStaff={totalStaff} bonusStaff={bonusStaff} />
         <div className="search-panel">
-          <SearchPanel />
-          <AppFilter />
+          <SearchPanel onUpdateSearch={this.onUpdateSearch} />
+          <AppFilter filter={filter} onFilterSelect={this.onFilterSelect} />
         </div>
-        <StaffList
-          data={data}
-          onDelete={this.onDeleteStaff}
-          onToggleProp={this.onToggleProp}
-        />
+        <StaffList data={foundData} onDelete={this.onDeleteStaff} onToggleProp={this.onToggleProp} />
         <StaffAddForm onAddStaff={this.onAddStaff} />
       </div>
     );

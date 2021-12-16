@@ -1,0 +1,16 @@
+.app {
+  &__info {
+    padding: 1rem;
+    color: #f0f8ff;
+    background-color: #173c5c;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 15px 15px 30px rgba(23, 60, 92, 0.5);
+  }
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  &__subtitle {
+    margin-bottom: 1rem;
+  }
+}
