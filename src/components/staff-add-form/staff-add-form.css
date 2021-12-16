@@ -23,5 +23,6 @@
   }
   .add-form .form-control {
     margin-top: 0.2rem;
+    width: 100vw;
   }
 }
