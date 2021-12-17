@@ -1,7 +1,8 @@
 {
   "name": "bonus-to-staff_app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://marin-mar.github.io/bonus-to-staff_app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
